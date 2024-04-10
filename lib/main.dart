@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -6,6 +7,7 @@ void main() async {
   await Firebase.initializeApp(
   options: DefaultFirebaseOptions.currentPlatform,
 );
+
   runApp(const MyApp());
 }
 
@@ -42,16 +44,26 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Text('Hola mundo2 ')
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          print('Hola'):
+      body:StreamBuilder(
+        stream: FirebaseFirestore.instance.collection("todoclass").snapshots(), 
+        builder: (context, snapshot) {
+          if (snapshot.hasData) return const Text('Cargando datos...');
+          return ListView.builder(
+            itemCount: snapshot.data?.docs.length,
+            itemBuilder: (context, index)=> ListTile(
+              leading: const Icon(Icons.task_alt),
+              title: Text(
+                'Numero de tareas ${snapshot.data!.docs[index]['number']}'),
+                subtitle: Text(snapshot.data!.docs[index]['name']),
+            ));
+        }) ,
+            floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('Hola');
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }

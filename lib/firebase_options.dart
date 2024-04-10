@@ -83,4 +83,5 @@ class DefaultFirebaseOptions {
     authDomain: 'firestore-dcc05.firebaseapp.com',
     storageBucket: 'firestore-dcc05.appspot.com',
   );
+
 }
