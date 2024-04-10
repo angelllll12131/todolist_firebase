@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text('Hola mundo')
+        child: Text('Hola mundo2 ')
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
