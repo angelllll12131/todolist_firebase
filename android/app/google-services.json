@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "658914783540",
+    "project_id": "firestore-dcc05",
+    "storage_bucket": "firestore-dcc05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658914783540:android:d10eeb2e7063167a39f561",
+        "android_client_info": {
+          "package_name": "com.example.todolist_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg74FkpKKDbP8MubKP6q4K0M-8dK_ZQVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658914783540:android:4dddde1a3416d3c839f561",
+        "android_client_info": {
+          "package_name": "com.utrm.todolist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg74FkpKKDbP8MubKP6q4K0M-8dK_ZQVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
